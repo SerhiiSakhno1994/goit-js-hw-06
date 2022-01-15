@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const addList = document.querySelector('ul');
+
+
+const makeListCard = image=> {
+  return `
+    <li class='item'>
+      <img src="${image.url}" alt="${image.alt}" class= 'item--img'>
+      </li>
+    </ul>
+    `
+}
+
+
+
+const makeList = images.map(makeListCard).join('');
+
+
+addList.insertAdjacentHTML("afterbegin", makeList);
