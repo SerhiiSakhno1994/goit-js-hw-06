@@ -6,12 +6,12 @@ function onFormSubmit(event) {
   event.preventDefault();
 
   const formElements = event.currentTarget.elements;
-  // console.dir(formElements);
+  
 
   const mail = formElements.email.value;
   const password = formElements.password.value;
   
-  if (password == false || mail == false) {
+  if (password === "" || mail === "") {
     alert("Заполните все поля");
     return;
   };
