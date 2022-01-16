@@ -13,7 +13,6 @@ function onFormSubmit(event) {
   
   if (password === "" || mail === "") {
     alert("Заполните все поля");
-    return;
   };
 
   const formData = {
